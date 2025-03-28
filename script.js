@@ -55,12 +55,11 @@ document.getElementById('checkButton').addEventListener('click', async () => {
 
         // Step 2: Security Analysis
         updateStep('step2', 0);
-       const backendURL = "https://fraud-detection.onrender.com";  
-const vtResponse = await fetch(`${backendURL}/check-domain`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ domain }),
-});
+        const vtResponse = await fetch('http://localhost:10000/check-domain', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ domain }),
+        });
         if (!vtResponse.ok) throw new Error('Failed to fetch domain details.');
         const vtData = await vtResponse.json();
         updateStep('step2', 100);
