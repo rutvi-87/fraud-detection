@@ -7,7 +7,7 @@ const whois = require('whois-json');
 const { getDomain } = require('tldjs');
 
 const app = express();
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(bodyParser.json());
