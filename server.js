@@ -9,7 +9,12 @@ const { getDomain } = require('tldjs');
 const app = express();
 const PORT = process.env.PORT || 10000;
 
-app.use(cors());
+app.use(cors({
+    origin: '*',  // Allow all origins (or replace '*' with your frontend URL)
+    methods: ['GET', 'POST'], // Restrict to allowed methods
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(bodyParser.json());
 app.use(express.static(__dirname));
 
