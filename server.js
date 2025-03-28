@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 10000;
 
 app.use(cors({
-    origin: 'https://fraud-detection.onrender.com',  // Allow all origins (or replace '*' with your frontend URL)
+    origin: '*',  // Allow all origins (or replace '*' with your frontend URL)
     methods: ['GET', 'POST'], // Restrict to allowed methods
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
