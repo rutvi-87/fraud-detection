@@ -55,7 +55,7 @@ document.getElementById('checkButton').addEventListener('click', async () => {
 
         // Step 2: Security Analysis
         updateStep('step2', 0);
-       const backendURL = "https://your-backend.onrender.com";  
+       const backendURL = "https://fraud-detection.onrender.com";  
 const vtResponse = await fetch(`${backendURL}/check-domain`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
