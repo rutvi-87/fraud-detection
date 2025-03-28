@@ -55,7 +55,7 @@ document.getElementById('checkButton').addEventListener('click', async () => {
 
         // Step 2: Security Analysis
         updateStep('step2', 0);
-        const vtResponse = await fetch('http://localhost:10000/check-domain', {
+        const vtResponse = await fetch('http://localhost:3000/check-domain', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ domain }),
