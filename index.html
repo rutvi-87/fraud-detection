@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Fraud Detection Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Add this div for background effects -->
+    <div class="background">
+        <div class="gradient"></div>
+        <div class="grid"></div>
+    </div>
+    
+    <div class="container glass">
+        <h1><i class="fas fa-shield-alt"></i> Investment fraud detection</h1>
+        <div class="search-box">
+            <input type="text" id="domainInput" placeholder="Enter domain (e.g., example.com)">
+            <button id="checkButton"><i class="fas fa-search"></i> Check</button>
+            <button id="voiceSearchBtn" class="voice-btn" aria-label="Voice Search">
+                <i class="fas fa-microphone"></i>
+            </button>
+        </div>
+
+        <!-- Enhanced Searching Animation -->
+        <div class="searching-container" id="searchingContainer">
+            <div class="search-animation">
+                <div class="radar-scan">
+                    <div class="radar-beam"></div>
+                    <div class="radar-circles"></div>
+                </div>
+                <div class="analysis-steps">
+                    <div class="step" id="step1">
+                        <i class="fas fa-globe pulse"></i>
+                        <span>Connecting to Domain...</span>
+                        <div class="step-progress"></div>
+                    </div>
+                    <div class="step" id="step2">
+                        <i class="fas fa-shield-alt pulse"></i>
+                        <span>Security Analysis...</span>
+                        <div class="step-progress"></div>
+                    </div>
+                    <div class="step" id="step3">
+                        <i class="fas fa-history pulse"></i>
+                        <span>Domain Age Check...</span>
+                        <div class="step-progress"></div>
+                    </div>
+                    <div class="step" id="step4">
+                        <i class="fas fa-virus-slash pulse"></i>
+                        <span>Threat Detection...</span>
+                        <div class="step-progress"></div>
+                    </div>
+                    <div class="step" id="step5">
+                        <i class="fas fa-brain pulse"></i>
+                        <span>AI Risk Assessment...</span>
+                        <div class="step-progress"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="analysis-metrics">
+                <div class="metric">
+                    <span class="label">Security Level:</span>
+                    <span class="value" id="securityLevel">Analyzing...</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Domain Age:</span>
+                    <span class="value" id="domainAge">Checking...</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Risk Factors:</span>
+                    <span class="value" id="riskFactors">Scanning...</span>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+
+        <!-- Enhanced Result Display -->
+        <div id="result" class="result">
+            <div class="score-panels">
+                <div class="score-panel ai-score">
+                    <h3>AI Trust Score</h3>
+                    <div class="score-circle"></div>
+                    <div class="score-details"></div>
+                </div>
+                <div class="score-panel vt-score">
+                    <h3>VirusTotal Score</h3>
+                    <div class="score-circle"></div>
+                    <div class="score-details"></div>
+                </div>
+            </div>
+        </div>  <!-- Add this closing div -->
+
+        <!-- History Section -->
+        <div class="history-section">
+            <h2><i class="fas fa-history"></i> Recent Checks</h2>
+            <div id="searchHistory" class="search-history"></div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="info-section">
+            <h3><i class="fas fa-info-circle"></i> About This Tool</h3>
+            <p>This tool helps detect potential investment fraud by analyzing domains using:</p>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> VirusTotal Security Analysis</li>
+                <li><i class="fas fa-robot"></i> AI-powered Risk Assessment</li>
+                <li><i class="fas fa-chart-line"></i> Trust Score Calculation</li>
+                <li><i class="fas fa-shield-alt"></i> Domain Age Verification</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>For educational purposes only. Always conduct thorough research before making investment decisions.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+ 
